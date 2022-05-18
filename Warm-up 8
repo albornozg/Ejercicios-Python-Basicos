@@ -1,0 +1,34 @@
+# Ejercicio de Warm-up 8
+
+"""
+
+Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, 
+then return True only if both are negative.
+
+Examples:
+pos_neg(1, -1, False) → True
+pos_neg(-1, 1, False) → True
+pos_neg(-4, -5, True) → True
+"""
+
+# Solucion 1 (la forma 'polera'):
+
+def pos_neg(a, b, negative):
+    if negative is True:
+        if a < 0 and b < 0:
+            return True
+        else:
+            return False
+    else:
+        if a < 0 < b or a > 0 > b:
+            return True
+        else:
+            return False
+
+# Solucion 2 (la forma 'correcta'):
+
+def pos_neg2(a, b, negative):
+    if negative:
+        return a < 0 and b < 0  # Esto parece una manera mas sencilla de evaluar condicionales
+    else:
+        return a < 0 < b or a > 0 > b
