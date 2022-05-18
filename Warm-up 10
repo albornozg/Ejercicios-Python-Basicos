@@ -1,0 +1,20 @@
+# Ejercicio de Warm-up 10
+
+"""
+Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n 
+will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
+
+Example:
+missing_char('kitten', 1) → 'ktten'
+missing_char('kitten', 0) → 'itten'
+missing_char('kitten', 4) → 'kittn'
+"""
+
+
+def missing_char(stri, n):
+    str_1 = stri[:n]
+    str_2 = stri[n + 1: len(stri)]
+    if n > 0 and len(stri) > 0:
+        return str_1 + str_2
+    else:
+        return str_2
