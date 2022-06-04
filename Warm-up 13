@@ -1,0 +1,22 @@
+# Ejercicio de Warm-up 13
+
+
+"""Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+
+Examples:
+string_times('Hi', 2) → 'HiHi'
+string_times('Hi', 3) → 'HiHiHi'
+string_times('Hi', 1) → 'Hi'
+"""
+
+
+def string_times(stri, n):
+    stri = stri * n
+    return stri
+
+
+def string_times2(stri, n):
+    result = ""
+    for i in range(n):  # range(n) is [0, 1, 2, .... n-1]
+        result = result + stri  # could use += here
+    return result
