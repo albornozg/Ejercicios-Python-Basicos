@@ -1,0 +1,26 @@
+"""
+Given a string, return a new string where the first and last chars have been exchanged.
+
+Examples:
+front_back('code') → 'eodc'
+front_back('a') → 'a'
+front_back('ab') → 'ba'
+"""
+
+
+def front_back(stri):
+    if len(stri) > 1:
+        return stri[len(stri) - 1] + stri[1: len(stri) - 1] + stri[0]
+    elif len(stri) == 0:
+        return ""
+    else:
+        return stri[0]
+
+
+def front_back2(stri):
+    if len(stri) <= 1:
+        return stri
+    mid = stri[1:len(stri) - 1]  # can be written as str[1:-1]
+
+    # last + mid + first
+    return stri[len(stri) - 1] + mid + stri[0]
